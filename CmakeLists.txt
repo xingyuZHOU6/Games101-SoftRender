@@ -1,0 +1,29 @@
+#要求最低Cmake版本
+cmake_minimum_required(VERSION 3.15)
+#项目名称
+project(UnityShader LANGUAGES CXX)
+#C++标准
+set(CMAKE_CXXSTANDARD 17)
+
+set(HEADERS
+"FragmentShader.h"
+"FrameBuffer.h"
+"Global.h"
+"OBJ_Loader.h"
+"Rasterizer.h"
+"Texture.h"
+"Triangle.h"
+"VertexShader.h"
+ )
+
+set(SOURCES
+"FragmentShader.cpp"
+"FrameBuffer.cpp"
+"main.cpp"
+"Rasterizer.cpp"
+"Triangle.cpp"
+"VertexShader.cpp"
+)
+
+set(TARGET UnityShader)
+add_executable(${TARGET} ${HEADERS} ${SOURCES})
