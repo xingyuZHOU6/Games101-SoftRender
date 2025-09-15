@@ -9,5 +9,8 @@ public:
 	//³¬²ÉÑù´æ´¢Í¼
 	std::vector<Eigen::Vector3f> ssaa_colorbuffer;
 	std::vector<float> ssaa_depthbuffer;
+
+	//´æ´¢shadow mapping
+	std::vector<float>ssaa_shadowbuffer;
 	framebuffer();
 };

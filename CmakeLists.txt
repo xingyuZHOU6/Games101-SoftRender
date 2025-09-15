@@ -14,6 +14,7 @@ set(HEADERS
 "Texture.h"
 "Triangle.h"
 "VertexShader.h"
+"Vertex.h"
  )
 
 set(SOURCES
@@ -23,6 +24,7 @@ set(SOURCES
 "Rasterizer.cpp"
 "Triangle.cpp"
 "VertexShader.cpp"
+"Vertex.cpp"
 )
 
 set(TARGET UnityShader)

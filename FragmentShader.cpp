@@ -6,7 +6,7 @@ fragmentshader::fragmentshader() {
 
 Eigen::Vector3f  fragmentshader::testshader() {
 
-	return Eigen::Vector3f(1.0f, 0, 0);
+	return Eigen::Vector3f(0.9f, 0.9f, 0.9f)*255.0f;//默认返回红色
 }
 Eigen::Vector3f fragmentshader::fragment_phong_shader(fragment_payload payload) {
 
@@ -14,7 +14,7 @@ Eigen::Vector3f fragmentshader::fragment_phong_shader(fragment_payload payload) 
 	Eigen::Vector3f kd = payload.color;
 	Eigen::Vector3f ks = Eigen::Vector3f(0.7937, 0.7937, 0.7937);
 
-	////定义两个点光源
+	////定义两个点光源(视图空间下)
 	auto l1 = light{ Eigen::Vector3f(20,15,20),Eigen::Vector3f(500,500,500) };
 	auto l2 = light{ Eigen::Vector3f(-30,20,10),Eigen::Vector3f(500,500,500) };
 
